@@ -15,7 +15,7 @@
 		"type": "git",
 		"url": "git+https://git.chevro.fr/cestoliv/serve-static-callback.git"
 	},
-	"keywords": [],
+	"keywords": ["express", "typescript", "express-middleware", "expressjs", "serve-static"],
 	"author": "cestoliv",
 	"license": "MIT",
 	"dependencies": {
