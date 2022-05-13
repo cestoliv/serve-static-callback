@@ -27,6 +27,20 @@ interface serveCallback{
 
 function serveStaticCb (root: string, options?: serveOptions, cb?: serveCallback): express.RequestHandler {
 	return function serveStatic (req: express.Request, res: express.Response, next: express.NextFunction) {
+		// get default options
+		var defaultOption: serveOptions = {
+			cacheControl: true,
+			etag: true,
+			extensions: false,
+			fallthrough: true,
+			immutable: false,
+			index: "index.html",
+			lastModified: true,
+			maxAge: 0,
+			redirect: true
+		}
+		options = {...defaultOption, ...options}
+
 		if (req.method !== 'GET' && req.method !== 'HEAD') {
 			if (options?.fallthrough) {
 				return next()
