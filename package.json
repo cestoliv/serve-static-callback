@@ -1,7 +1,7 @@
 {
 	"name": "serve-static-callback",
 	"version": "1.0.2",
-	"description": "",
+	"description": "Work exactly like Express static middleware, but add a callback function.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.js",
 	"files": [
